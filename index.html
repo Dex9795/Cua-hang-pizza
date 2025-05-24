@@ -8,337 +8,298 @@
   <script src="https://cdn.tailwindcss.com">
   </script>
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&amp;family=Roboto&amp;display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet"/>
   <style>
    body {
       font-family: 'Roboto', sans-serif;
-      font-size: 1rem;
-    }
-    .font-robotoslab {
-      font-family: 'Roboto Slab', serif;
-    }
-    header {
-      font-size: 1.5rem; /* 1.5 times the original size */
     }
   </style>
  </head>
- <body class="bg-[#E6E1D9] text-[#3B3A4D] min-h-screen flex flex-col">
-  <!-- Header top bar -->
-  <header class="bg-[#3B3A4D] text-[#E6E1D9] text-center text-2xl py-1 font-robotoslab">
-   PIZZA 4TL
-  </header>
-  <!-- Navigation bar -->
-  <nav class="bg-[#E6E1D9] border-b border-[#3B3A4D] flex justify-between items-center px-4 py-2">
+ <body class="bg-[#e6e0d3] text-[#3a3a3a]">
+  <!-- Top bar -->
+  <div class="bg-[#2f3552] text-[#d9d9d9] text-xs flex justify-between items-center px-4 py-1 font-semibold select-none">
    <div class="flex items-center space-x-2">
-    <img alt="Pizza 4TL logo, a stylized pizza slice with text" class="w-10 h-10 object-contain" height="40" src="https://storage.googleapis.com/a1aa/image/78a07b39-890f-486c-4f06-a68b251221db.jpg" width="40"/>
-    <div class="text-xs font-robotoslab text-[#3B3A4D]">
-     <a class="hover:underline" href="#">
+    <img alt="Pizza 4TL logo" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/8e16e9b3-caaf-434c-c2b7-5d4c1c9e4d1c.jpg" width="24"/>
+    <span>
+     PIZZA 4TL
+    </span>
+   </div>
+   <div class="flex items-center space-x-4">
+    <span>
+     ĐẶT PIZZA NGAY - GIẢM GIÁ CỰ ĐÃI
+    </span>
+   </div>
+  </div>
+  <!-- Search and login -->
+  <div class="bg-[#ebe6d3] flex flex-col sm:flex-row items-center justify-between px-4 py-3 gap-3 sm:gap-0">
+   <div class="flex items-center w-full sm:w-[600px] max-w-full bg-white rounded-md border border-gray-300 px-3 py-1">
+    <i class="fas fa-search text-gray-400">
+    </i>
+    <input class="ml-2 w-full text-sm text-gray-600 placeholder-gray-400 focus:outline-none" placeholder="Tìm kiếm..." type="text"/>
+   </div>
+   <div class="flex items-center space-x-4">
+    <button class="flex items-center border border-gray-400 rounded-md px-3 py-1 text-sm text-gray-700 hover:bg-gray-100">
+     <i class="fas fa-user mr-2">
+     </i>
+     Đăng nhập
+    </button>
+    <button class="flex items-center border border-gray-400 rounded-md px-3 py-1 text-sm text-gray-700 hover:bg-gray-100">
+     <i class="fas fa-globe">
+     </i>
+    </button>
+   </div>
+  </div>
+  <!-- Navigation bar -->
+  <nav class="bg-[#ebe6d3] border-b border-[#2f3552]">
+   <ul class="flex justify-center space-x-8 text-sm font-semibold text-[#2f3552] py-2 select-none">
+    <li class="flex items-center space-x-1 cursor-pointer hover:text-[#1a1a1a]">
+     <i class="fas fa-home">
+     </i>
+     <span>
       Trang chủ
-     </a>
-     -
-     <a class="hover:underline" href="#">
-      Thực đơn
-     </a>
+     </span>
+    </li>
+    <li class="cursor-pointer hover:text-[#1a1a1a]">
+     Thực đơn
+    </li>
+    <li class="cursor-pointer hover:text-[#1a1a1a]">
+     Giao Hàng Tận Nơi
+    </li>
+    <li class="cursor-pointer hover:text-[#1a1a1a]">
+     Về Chúng Tôi
+    </li>
+    <li class="cursor-pointer hover:text-[#1a1a1a] flex items-center space-x-1">
+     <i class="fas fa-shopping-cart">
+     </i>
+     <span>
+      Giỏ hàng
+     </span>
+    </li>
+   </ul>
+  </nav>
+  <!-- Main content -->
+  <main class="px-4 py-4 max-w-7xl mx-auto">
+   <div class="flex flex-col md:flex-row gap-4">
+    <!-- Left image -->
+    <div class="md:w-1/3">
+     <img alt="Close-up photo of a pizza with cheese, tomato slices, basil leaves, and a white ball of mozzarella cheese on top" class="rounded-md w-full object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/64f4907b-e86e-4c66-134a-a43c21eba319.jpg" width="300"/>
+    </div>
+    <!-- Center promo -->
+    <div class="md:w-1/3 bg-[#f4d7b0] rounded-md flex flex-col justify-center items-center p-6 text-[#b68a4a]">
+     <div class="flex items-center space-x-2 mb-2">
+      <img alt="Bee icon" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/1ec6c177-39af-4fe3-0139-e74d7fc434ea.jpg" width="24"/>
+      <h2 class="text-4xl font-extrabold leading-none">
+       MUA TẶNG
+      </h2>
+      <div class="text-9xl font-extrabold leading-none">
+       1
+      </div>
+     </div>
+     <p class="uppercase font-semibold text-sm mb-1">
+      PIZZA YÊU THÍCH · GIAO HÀNG TẬN NƠI
+     </p>
+     <p class="text-xs font-semibold">
+      Áp dụng từ:
+      <span class="font-bold">
+       01/05/2025 - 15/05/2025
+      </span>
+     </p>
+    </div>
+    <!-- Right welcome box -->
+    <div class="md:w-1/3 bg-white rounded-md p-4 border border-[#d9d9d9] flex flex-col justify-between">
+     <h3 class="text-lg font-semibold mb-2">
+      Chào mừng bạn đến với Pizza 4TL
+     </h3>
+     <p class="text-xs italic text-[#b68a4a] mb-3">
+      "Người đặt đơn từ lúc nào rồi..."
+     </p>
+     <button class="bg-[#2f3552] text-white text-xs rounded-md py-1 px-3 w-full hover:bg-[#1a1a1a]">
+      Vui lòng nhập địa chỉ để đặt món
+     </button>
     </div>
    </div>
-   <div class="flex items-center space-x-1 text-xs font-robotoslab text-[#3B3A4D]">
-    <span>
-     Giỏ hàng
-    </span>
-    <i class="fas fa-shopping-cart">
-    </i>
-   </div>
-  </nav>
-  <!-- Main container -->
-  <main class="flex-grow max-w-7xl mx-auto px-4 py-4">
-    <h2 style="text-align:center; font-size: 28px; margin-bottom: 20px;border: 3px solid; border-radius: 2px; padding: 5px;">THỰC ĐƠN</h2>
-   <!-- Title bar -->
-   <div class="bg-[#E6E1D9] border border-[#3B3A4D] rounded-md max-w-[160px] mx-auto mb-6">
-    <h2 class="text-center text-sm font-robotoslab font-semibold text-[#3B3A4D] py-1 select-none">
-     PIZZA
-    </h2>
-   </div>
-   <!-- Pizza items grid -->
-   <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-    <!-- Each pizza card -->
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza phô mai sốt mật ong in a round pan with golden cheese and honey glaze" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/2195eb92-27df-4cd1-de6c-c687716979f6.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza phô mai sốt mật ong
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      145.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza phô mai with melted cheese in a round pan" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/b53f3b14-3129-4131-2453-a88a568b4734.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza phô mai
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      150.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza cá tím muối ớt with toppings of eggplant and chili" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/e60b5790-a27d-4493-5748-af41e3e56812.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza cá tím muối ớt
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      150.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza sốt nấm thịt nguội with mushroom and ham toppings" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/8c6d58ec-d234-4dc3-2130-c5fe4d6ca97f.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza sốt nấm thịt nguội
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      150.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza rau mà chay with fresh green vegetable toppings" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/c4b7005b-41af-4222-2c3c-6eaaa00806ca.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza rau mà chay
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      130.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza sốt tỏi cay with spicy garlic sauce and toppings" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/e469576a-d8f0-4b22-04fd-812586e46375.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza sốt tỏi cay
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      120.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza phô mai Burrata Margherita thịt nguội with burrata cheese and ham" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/8cdc5e0c-7fd0-4aba-7931-2f9383b00e1f.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza phô mai Burrata Margherita thịt nguội
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      150.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Pizza gà sốt nấm with chicken and mushroom sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/b699db7e-229c-4042-1690-e83d0c0309aa.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Pizza gà sốt nấm
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      150.000 vnđ
-     </p>
-    </article>
+   <!-- Popular section -->
+   <section class="mt-8">
+    <h4 class="font-semibold mb-3">
+     Phổ biến
+    </h4>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 bg-[#ebe6d3] p-4 rounded-md border border-[#2f3552]">
+     <!-- Item 1 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Plate of spaghetti with tomato sauce and chili pepper" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/97d1cdd6-bbfb-4a53-9a03-98a85e931816.jpg" width="120"/>
+      <p class="text-xs font-semibold mb-1">
+       Mì Ý tôm sốt tỏi cay
+      </p>
+      <div class="text-xs text-[#2f3552] font-semibold">
+       127.000 vnđ
+      </div>
+      <button aria-label="Add Mì Ý tôm sốt tỏi cay to cart" class="mt-1 text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+     </div>
+     <!-- Item 2 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Pizza with beef, cheese, and vegetables" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/c18120c2-02a5-4153-76ca-aabb9fd0e865.jpg" width="120"/>
+      <p class="text-xs font-semibold mb-1">
+       Pizza bò kho
+      </p>
+      <div class="text-xs text-[#2f3552] font-semibold">
+       116.000 vnđ
+      </div>
+      <button aria-label="Add Pizza bò kho to cart" class="mt-1 text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+     </div>
+     <!-- Item 3 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Pizza Margherita with meat" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/7d216d57-6d2c-4a13-6bfd-3e065605538e.jpg" width="120"/>
+      <p class="text-xs font-semibold mb-1">
+       Pizza Margherita thịt nguội
+      </p>
+      <div class="text-xs text-[#2f3552] font-semibold">
+       116.000 vnđ
+      </div>
+      <button aria-label="Add Pizza Margherita thịt nguội to cart" class="mt-1 text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+     </div>
+     <!-- Item 4 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Pizza with cheese and egg" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/41c35737-606d-4e7e-d2d3-5595201a0bd1.jpg" width="120"/>
+      <p class="text-xs font-semibold mb-1">
+       Pizza phô mai sốt mật ong
+      </p>
+      <div class="text-xs text-[#2f3552] font-semibold">
+       205.000 vnđ
+      </div>
+      <button aria-label="Add Pizza phô mai sốt mật ong to cart" class="mt-1 text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+     </div>
+    </div>
    </section>
-   <!-- Italian section title -->
-   <div class="bg-[#E6E1D9] border border-[#3B3A4D] rounded-md max-w-[160px] mx-auto mb-6">
-    <h2 class="text-center text-sm font-robotoslab font-semibold text-[#3B3A4D] py-1 select-none">
-     Mì Ý
-    </h2>
-   </div>
-   <!-- Italian dishes grid -->
-   <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý sốt cà chua hột bọt vịt phô mai, spaghetti with tomato sauce, duck egg and cheese" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/c647a8e5-b4f8-4741-bb25-758287624dff.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý sốt cà chua hột bọt vịt phô mai
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      120.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý sốt tỏi cay, spaghetti with spicy garlic sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/f0959bee-8908-4ecd-2e5d-8c1ccd4bc7ee.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý sốt tỏi cay
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      127.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý nghiêu sốt quế tây, spaghetti with clams and cinnamon sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/d8ee36a2-0b46-4f99-331f-354476f5a358.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý nghiêu sốt quế tây
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      127.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý bò băm và phô mai hà khôi, spaghetti with minced beef and cheese" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/c69c8c26-5216-4639-42c1-d902e47d6ee9.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý bò băm và phô mai hà khôi
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      127.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý sốt bacon bò chả, spaghetti with bacon and beef sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/9bbd46a7-746b-413c-1629-dbfd241faa91.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý sốt bacon bò chả
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      230.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý sốt hải sản, spaghetti with seafood sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/c224871c-0b6e-42af-379a-56880f72080d.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý sốt hải sản
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      160.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý xốt nấm nước, spaghetti with mushroom sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/e3d2bad5-22ad-423d-5210-7e9bfd88646e.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý xốt nấm nước
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      120.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Mì Ý sốt cà tây, spaghetti with tomato sauce" class="w-28 h-28 object-cover rounded" height="120" src="https://storage.googleapis.com/a1aa/image/663f3987-b634-4fe7-34af-e94d961c9bae.jpg" width="120"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Mì Ý sốt cà tây
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      127.000 vnđ
-     </p>
-    </article>
-   </section>
-   <!-- Drinks section title -->
-   <div class="bg-[#E6E1D9] border border-[#3B3A4D] rounded-md max-w-[160px] mx-auto mb-6">
-    <h2 class="text-center text-sm font-robotoslab font-semibold text-[#3B3A4D] py-1 select-none">
-     Nước uống
-    </h2>
-   </div>
-   <!-- Drinks grid with 4 columns -->
-   <section class="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Nước ép dưa hấu, glass of fresh watermelon juice with ice and straw" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/fcacd79e-1513-41f1-b397-482eb431c439.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Nước ép dưa hấu
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      30.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Nước ép thơm, glass of fresh pineapple juice with ice and straw" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/879ffd01-9c85-48fa-648d-bd4de93f0714.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Nước ép thơm
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      30.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Nước cam, glass of fresh orange juice with ice and straw" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/cb934801-81cb-4a05-ecce-b42a76f69a72.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Nước cam
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      30.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Nước ép rau đồng hợp, glass of fresh green vegetable juice with ice and straw" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/696285a4-40f8-4957-34a2-52053fdbcdd2.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Nước ép rau đồng hợp
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      30.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Coca Cola can, red can with white logo" class="w-24 h-24 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/457331ad-fd2f-43a3-6e2c-95344dc415e4.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Coca Cola
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      24.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Sprite can, green can with white logo" class="w-24 h-24 object-contain" height="100" src="https://storage.googleapis.com/a1aa/image/9ea2e21a-7653-43eb-7887-653428865ef9.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Sprite
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      45.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Rượu vang Sangria, glass of red wine with bottle on dark background" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/1791163d-f6c4-4a50-b2b2-acba3bc8e2f3.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Rượu vang Sangria
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      140.000 vnđ
-     </p>
-    </article>
-    <article class="bg-[#F5F3EB] border border-[#3B3A4D] rounded-md p-2 flex flex-col items-center text-center">
-     <img alt="Nước táo lên men, bottle of fermented apple juice with glass on wooden table" class="w-24 h-24 object-cover rounded" height="100" src="https://storage.googleapis.com/a1aa/image/d76d066c-7541-4664-2f5d-ce661d2ae685.jpg" width="100"/>
-     <h3 class="mt-2 text-xs font-robotoslab font-semibold text-[#3B3A4D]">
-      Nước táo lên men
-     </h3>
-     <p class="text-xs text-[#3B3A4D] mt-1">
-      30.000 vnđ
-     </p>
-    </article>
+   <!-- Combo section -->
+   <section class="mt-8">
+    <div class="text-center text-xs font-semibold text-[#2f3552] border-b border-[#2f3552] pb-1 select-none">
+     Combo Khuyến Mãi Đặc Biệt
+    </div>
+    <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 md:grid-cols-6 gap-4">
+     <!-- Combo 1 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9] relative">
+      <div class="absolute top-1 left-1 text-[9px] font-semibold text-[#b68a4a] bg-[#f4d7b0] rounded px-1 select-none">
+       Sale Khuyến Mãi
+      </div>
+      <img alt="Combo 1 with pizza and salad on plates" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/787ef2ec-0b74-406a-fad2-c6e4323efc80.jpg" width="120"/>
+      <p class="text-[10px] font-semibold mb-1 text-center">
+       Khuyến mãi mua 1 tặng 1 đang áp dụng từ 01/5 - 15/5
+      </p>
+      <button aria-label="Add Combo 1 to cart" class="text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+      <div class="text-xs text-[#2f3552] font-semibold mt-1">
+       120.000 vnđ
+      </div>
+     </div>
+     <!-- Combo 2 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Combo 2 with salad and drink on plates" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/d6f7b2ef-5d1b-4136-4dd7-f54eee6a8f5c.jpg" width="120"/>
+      <p class="text-[10px] font-semibold mb-1 text-center">
+       Combo 1 người ăn hợp khẩu vị
+      </p>
+      <button aria-label="Add Combo 2 to cart" class="text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+      <div class="text-xs text-[#2f3552] font-semibold mt-1">
+       135.000 vnđ
+      </div>
+     </div>
+     <!-- Combo 3 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9]">
+      <img alt="Combo 2 for 2 people with various dishes on plates" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/bf7c0497-8708-4eda-6eb5-05028f53f62e.jpg" width="120"/>
+      <p class="text-[10px] font-semibold mb-1 text-center">
+       Combo 2 người ăn
+      </p>
+      <button aria-label="Add Combo 3 to cart" class="text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+      <div class="text-xs text-[#2f3552] font-semibold mt-1">
+       180.000 vnđ
+      </div>
+     </div>
+     <!-- Combo 4 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9] sm:col-span-2 md:col-auto">
+      <img alt="Combo 3 for 3 people with various dishes on plates" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/08355cd5-76ba-4dcb-82dc-fcd7079f9d29.jpg" width="120"/>
+      <p class="text-[10px] font-semibold mb-1 text-center">
+       Combo 3 người ăn
+      </p>
+      <button aria-label="Add Combo 4 to cart" class="text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+      <div class="text-xs text-[#2f3552] font-semibold mt-1">
+       240.000 vnđ
+      </div>
+     </div>
+     <!-- Combo 5 -->
+     <div class="bg-white rounded-md p-2 flex flex-col items-center border border-[#d9d9d9] sm:col-span-2 md:col-auto">
+      <img alt="Combo 5 for 8 people with large pizza on a wooden table" class="rounded-md mb-2 w-full object-cover" height="90" src="https://storage.googleapis.com/a1aa/image/1d2f5f70-a7fc-4c2c-e8ac-9a29b71f7a01.jpg" width="120"/>
+      <p class="text-[10px] font-semibold mb-1 text-center">
+       Combo 5 người ăn bình dân
+      </p>
+      <button aria-label="Add Combo 5 to cart" class="text-[#2f3552] text-lg font-bold hover:text-[#1a1a1a]">
+       +
+      </button>
+      <div class="text-xs text-[#2f3552] font-semibold mt-1">
+       525.000 vnđ
+      </div>
+     </div>
+    </div>
    </section>
   </main>
   <!-- Footer -->
-  <footer class="bg-[#3B3A4D] text-[#E6E1D9] text-xs font-robotoslab px-4 py-3 flex flex-col sm:flex-row justify-between items-center gap-2">
-   <div class="text-center sm:text-left">
-    PIZZA 4TL
-    <br/>
-    123 Đường ABC, P. XYZ, Q. 1, TP. HCM
-    <br/>
-    Điện thoại: 0123 456 789
-    <br/>
-    Email: pizza4tl@gmail.com
+  <footer class="bg-[#ebe6d3] border-t border-[#2f3552] text-xs text-[#3a3a3a] py-4 px-4 max-w-7xl mx-auto flex flex-col sm:flex-row justify-between select-none">
+   <div class="mb-4 sm:mb-0">
+    <p>
+     Pizza 4TL
+    </p>
+    <p>
+     Địa chỉ:
+    </p>
+    <p>
+     30 Công Hòa, Quận Tân Bình, tp Hồ Chí Minh
+    </p>
+    <p>
+     Thông tin hỗ trợ: 1900 636 099
+    </p>
    </div>
-   <div class="text-center sm:text-left">
-    Dịch vụ khách hàng
-    <br/>
-    Chính sách đổi trả
-    <br/>
-    Chính sách bảo mật
+   <div class="mb-4 sm:mb-0">
+    <p class="font-semibold">
+     Dịch vụ khách hàng
+    </p>
+    <p>
+     Hướng dẫn đặt hàng
+    </p>
+    <p>
+     Hướng dẫn đổi trả và hoàn tiền
+    </p>
    </div>
-   <div class="text-center sm:text-left">
-    Chính sách &amp; Quy định
-    <br/>
-    Thanh toán và vận chuyển
-    <br/>
-    Liên hệ hợp tác
+   <div class="mb-4 sm:mb-0">
+    <p class="font-semibold">
+     Chính sách &amp; Quy định
+    </p>
+    <p>
+     Chính sách bảo mật
+    </p>
+    <p>
+     Chính sách thanh toán
+    </p>
    </div>
-   <div class="flex space-x-3 text-lg">
-    <a aria-label="Facebook" class="hover:text-[#E6E1D9]" href="#">
-     <i class="fab fa-facebook-f">
-     </i>
-    </a>
-    <a aria-label="Twitter" class="hover:text-[#E6E1D9]" href="#">
-     <i class="fab fa-twitter">
-     </i>
-    </a>
-    <a aria-label="Instagram" class="hover:text-[#E6E1D9]" href="#">
-     <i class="fab fa-instagram">
-     </i>
-    </a>
-    <a aria-label="Pinterest" class="hover:text-[#E6E1D9]" href="#">
-     <i class="fab fa-pinterest-p">
-     </i>
-    </a>
+   <div class="flex items-center space-x-2">
+    <p>
+     Trước khi đặt hàng xin hãy xem kỹ!
+    </p>
+    <img alt="Icon representing a warning or important note" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/f7bdddb3-4458-47fc-0cdd-02735e66bfac.jpg" width="24"/>
+    <img alt="Icon representing a security or guarantee" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/a01f6572-9c0e-4566-3e0b-c9062690acdd.jpg" width="24"/>
+    <img alt="Icon representing a payment or certification" class="w-6 h-6" height="24" src="https://storage.googleapis.com/a1aa/image/29fc7677-1559-4e9e-4868-df73bda38190.jpg" width="24"/>
    </div>
   </footer>
  </body>
