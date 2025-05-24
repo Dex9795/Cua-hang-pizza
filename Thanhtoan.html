@@ -1,0 +1,377 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Pizza 4TL</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    rel="stylesheet"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6ddca;
+    }
+    .font-playfair {
+      font-family: "Playfair Display", serif;
+    }
+  </style>
+</head>
+<body class="bg-[#e6ddca] text-[11px] text-black">
+  <!-- Top navy bar with title -->
+  <header
+    class="bg-[#2a3153] text-white font-playfair text-center text-lg font-semibold py-1 select-none"
+  >
+    PIZZA 4TL
+  </header>
+  <!-- Main container -->
+  <div class="max-w-[1200px] mx-auto px-4 md:px-6 pt-4">
+    <!-- Top nav area -->
+    <div class="flex justify-between items-center mb-2">
+      <!-- Left side: logo and search -->
+      <div class="flex items-center space-x-4">
+        <img
+          alt="Pizza slice logo with text 4TL PIZZA in beige and brown colors"
+          class="w-[50px] h-[70px] object-contain"
+          height="70"
+          src="./img/Logo_cửa hàng.png"
+          width="50"
+        />
+        <form class="relative w-[300px] md:w-[400px]">
+          <input
+            class="w-full rounded-md py-2 pl-10 pr-3 text-[14px] placeholder:text-[#999] focus:outline-none"
+            placeholder="Tim kiếm..."
+            type="search"
+          />
+          <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-[#2a3153]"></i>
+        </form>
+      </div>
+      <!-- Right side: login and globe icon -->
+      <div class="flex items-center space-x-3 text-[12px] font-semibold text-[#2a3153]">
+        <button
+          class="flex items-center border border-[#2a3153] rounded-md px-3 py-1 hover:bg-[#2a3153] hover:text-white transition"
+          type="button"
+        >
+          <i class="fas fa-user-circle mr-1"></i> Đăng nhập
+        </button>
+        <button aria-label="Language or global settings" type="button">
+          <i class="fas fa-globe text-[#2a3153] text-xl"></i>
+        </button>
+      </div>
+    </div>
+    <!-- Breadcrumb -->
+    <div class="text-[12px] text-[#2a3153] mb-3 select-none"><a href="./index.html">Trang chủ</a>-<a href="./Thanhtoan.html">Thanh toán</a></div>
+    <hr class="border-[#2a3153] mb-4" />
+    <!-- Main content flex container -->
+    <div class="flex flex-col md:flex-row md:space-x-6">
+      <!-- Left side: Chi tiết món -->
+      <section class="flex-1 space-y-4" id="order-list">
+        <h2 class="font-semibold text-[#2a3153] mb-2 select-none">Chi tiết món</h2>
+        <!-- Items will be rendered here by JS -->
+      </section>
+      <!-- Right side: Thông tin đơn hàng -->
+      <section
+        class="bg-white rounded-md p-4 mt-6 md:mt-0 md:w-[350px] text-[#2a3153] font-semibold select-none"
+        id="order-info"
+      >
+        <h2 class="text-lg mb-3">Thông tin đơn hàng</h2>
+        <div class="text-[11px] font-normal space-y-2">
+          <div class="flex justify-between border-b border-[#e6ddca] pb-1">
+            <span>Chi tiết đơn</span>
+            <span></span>
+          </div>
+          <div class="flex justify-between">
+            <span>Tổng đơn :</span>
+            <span class="font-semibold" id="total-price">0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Phí vận chuyển :</span>
+            <span class="font-semibold">Miễn phí</span>
+          </div>
+          <div class="flex justify-between border-b border-[#e6ddca] pb-1">
+            <span>Thuế 4% :</span>
+            <span class="font-semibold" id="tax-amount">0</span>
+          </div>
+          <div class="flex justify-between mt-2">
+            <span>Tổng tiền :</span>
+            <span class="font-semibold" id="total-with-tax">0</span>
+          </div>
+          <div class="flex justify-between">
+            <span>Làm tròn :</span>
+            <span class="font-semibold" id="rounded-total">0</span>
+          </div>
+          <div class="mt-3">
+            <p class="font-semibold mb-1">Giao hàng tới :</p>
+            <p class="text-[10px] font-normal leading-tight">
+              46 Nguyễn Quý Anh, Tân Sơn Nhì, Tân Phú, Hồ Chí Minh
+            </p>
+          </div>
+          <div class="mt-3">
+            <p class="font-semibold mb-1">Thời gian dự kiến :</p>
+            <p class="text-[10px] font-normal">50 phút</p>
+          </div>
+        </div>
+        <button
+          id="payment-method-btn"
+          class="w-full bg-[#2a3153] text-white font-semibold py-2 rounded mt-6 hover:bg-[#1f2540] transition"
+          type="button"
+        >
+          Phương thức thanh toán ▲
+        </button>
+        <button
+          id="pay-btn"
+          class="w-full bg-[#2a3153] text-white font-semibold py-2 rounded mt-3 hover:bg-[#1f2540] transition"
+          type="button"
+        >
+          Thanh toán
+        </button>
+        <button
+          class="w-full text-[#2a3153] font-semibold py-1 mt-2 underline hover:text-[#1f2540] transition"
+          type="button"
+        >
+          <a href="./index.html">Hủy</a>
+        </button>
+      </section>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer class="bg-[#e6ddca] border-t border-[#2a3153] mt-6 py-4 select-none">
+    <div
+      class="max-w-[1200px] mx-auto px-4 md:px-6 grid grid-cols-1 sm:grid-cols-3 gap-4 text-[10px] text-[#2a3153]"
+    >
+      <div>
+        <p class="font-semibold mb-1">PIZZA 4TL</p>
+        <p>Địa chỉ</p>
+        <p>36 Cộng Hòa, Quận Tân Bình, tp.Hồ Chí Minh</p>
+        <p>Đường dây hỗ trợ</p>
+        <p>1900363636</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-1">Dịch vụ khách hàng</p>
+        <p>Chính sách giao hàng</p>
+        <p>Chính sách đổi trả và hoàn tiền</p>
+      </div>
+      <div>
+        <p class="font-semibold mb-1">Chính sách &amp; Quy định</p>
+        <p>Chính sách quán chung</p>
+        <p>Chính sách thanh toán</p>
+      </div>
+    </div>
+    <div
+      class="max-w-[1200px] mx-auto px-4 md:px-6 mt-3 flex justify-end space-x-4 text-[#2a3153]"
+    >
+      <span>Theo dõi chúng tôi trên các trang xã hội</span>
+      <a aria-label="Spotify" class="hover:text-black" href="#">
+        <i class="fab fa-spotify text-lg"></i>
+      </a>
+      <a aria-label="Instagram" class="hover:text-black" href="#">
+        <i class="fab fa-instagram text-lg"></i>
+      </a>
+      <a aria-label="X Twitter" class="hover:text-black" href="#">
+        <i class="fab fa-x-twitter text-lg"></i>
+      </a>
+      <a aria-label="Facebook" class="hover:text-black" href="#">
+        <i class="fab fa-facebook-f text-lg"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Hidden payment success message -->
+  <div id="payment-success" class="fixed inset-0 bg-white bg-opacity-90 flex flex-col items-center justify-center p-6 text-center hidden z-50">
+    <h1 class="text-[22px] font-semibold text-[#3a4661] mb-6 select-none">Thanh toán thành công</h1>
+    <img alt="Green checkmark emoji inside a green square" class="mx-auto mb-6" height="40" src="https://storage.googleapis.com/a1aa/image/949309f0-b153-4197-cfdc-5009f408f24d.jpg" width="40" />
+    <button id="back-home-btn" class="text-[14px] text-black underline hover:text-gray-700 focus:outline-none" type="button"><a href="./index.html">Quay lại trang chủ</a></button>
+  </div>
+
+  <script>
+    // Data for the order items
+    const items = [
+      {
+        id: 1,
+        name: "Pizza phô mai sốt mật ong",
+        taxPercent: 4,
+        price: 145000,
+        img: "https://storage.googleapis.com/a1aa/image/e5df2f47-99ba-45cf-cd6c-3e66f7d94993.jpg",
+        alt: "Pizza phô mai sốt mật ong with golden crust and cheese on plate",
+        quantity: 1,
+      },
+      {
+        id: 2,
+        name: "Pizza Phô mai",
+        taxPercent: 4,
+        price: 130000,
+        img: "https://storage.googleapis.com/a1aa/image/cd041c0a-557a-4f24-8837-3ec06c54c9e7.jpg",
+        alt: "Pizza Phô mai with melted cheese and herbs on plate",
+        quantity: 1,
+      },
+      {
+        id: 3,
+        name: "Mì Ý cua sốt kem cà chua",
+        taxPercent: 4,
+        price: 236000,
+        img: "https://storage.googleapis.com/a1aa/image/43977d76-524f-4464-25d1-28ffa8dc35ec.jpg",
+        alt: "Mì ý cua sốt kem cà chua pasta with tomato cream sauce on plate",
+        quantity: 1,
+      },
+      {
+        id: 4,
+        name: "Nước ép thơm",
+        taxPercent: 4,
+        price: 36000,
+        img: "https://storage.googleapis.com/a1aa/image/5471c6f6-3e9a-482d-3e3c-0992a29bebeb.jpg",
+        alt: "Nước ép thơm glass of pineapple juice with ice and straw",
+        quantity: 1,
+      },
+    ];
+
+    // Format number as currency string with dot as thousand separator and comma as decimal
+    function formatCurrency(num) {
+      return num
+        .toFixed(3)
+        .replace(/\B(?=(\d{3})+(?!\d))/g, ".")
+        .replace(/\.?0+$/, "")
+        .replace(/(\d+),(\d+)$/, "$1,$2");
+    }
+
+    // Render the order items in the left section
+    function renderItems() {
+      const container = document.getElementById("order-list");
+      container.innerHTML = `<h2 class="font-semibold text-[#2a3153] mb-2 select-none">Chi tiết món</h2>`;
+
+      items.forEach((item) => {
+        const itemDiv = document.createElement("div");
+        itemDiv.className =
+          "bg-white rounded-md p-3 flex items-center justify-between shadow-sm";
+        itemDiv.dataset.id = item.id;
+
+        itemDiv.innerHTML = `
+          <div class="flex items-center space-x-3">
+            <img
+              alt="${item.alt}"
+              class="w-[70px] h-[60px] object-cover rounded"
+              height="60"
+              src="${item.img}"
+              width="70"
+            />
+            <div class="text-[11px] leading-tight">
+              <p class="font-semibold">${item.name}</p>
+              <p>Thuế : ${item.taxPercent}%</p>
+              <p>Giá : ${formatCurrency(item.price)}đ</p>
+            </div>
+          </div>
+          <div class="flex items-center space-x-2">
+            <button aria-label="Remove item" class="text-black text-xs font-bold border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-gray-200" data-action="decrease" type="button">
+              <i class="fas fa-minus"></i>
+            </button>
+            <span class="bg-gray-200 rounded-full w-5 h-5 flex items-center justify-center text-xs font-semibold select-none" data-quantity>${item.quantity}</span>
+            <button aria-label="Add item" class="text-black text-xs font-bold border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-gray-200" data-action="increase" type="button">
+              <i class="fas fa-plus"></i>
+            </button>
+            <button aria-label="Remove product" class="ml-3 text-xs font-bold border border-gray-300 rounded-full w-5 h-5 flex items-center justify-center hover:bg-gray-200" data-action="remove" type="button">
+              X
+            </button>
+          </div>
+        `;
+
+        container.appendChild(itemDiv);
+      });
+    }
+
+    // Calculate and update order info on the right side
+    function updateOrderInfo() {
+      const totalPriceEl = document.getElementById("total-price");
+      const taxAmountEl = document.getElementById("tax-amount");
+      const totalWithTaxEl = document.getElementById("total-with-tax");
+      const roundedTotalEl = document.getElementById("rounded-total");
+
+      let total = 0;
+      let totalTax = 0;
+
+      items.forEach((item) => {
+        const itemTotal = item.price * item.quantity;
+        total += itemTotal;
+        totalTax += (item.taxPercent / 100) * itemTotal;
+      });
+
+      const totalWithTax = total + totalTax;
+      const roundedTotal = Math.round(totalWithTax);
+
+      totalPriceEl.textContent = formatCurrency(total);
+      taxAmountEl.textContent = formatCurrency(totalTax) + "đ";
+      totalWithTaxEl.textContent = formatCurrency(totalWithTax) + "đ";
+      roundedTotalEl.textContent = formatCurrency(roundedTotal) + "đ";
+    }
+
+    // Handle clicks on +, -, and X buttons
+    function handleButtonClick(e) {
+      const btn = e.target.closest("button");
+      if (!btn) return;
+
+      const action = btn.dataset.action;
+      if (!action) return;
+
+      // Find the item container div
+      const itemDiv = btn.closest("div.bg-white");
+      if (!itemDiv) return;
+
+      const itemId = Number(itemDiv.dataset.id);
+      const item = items.find((i) => i.id === itemId);
+      if (!item) return;
+
+      if (action === "increase") {
+        item.quantity++;
+      } else if (action === "decrease") {
+        if (item.quantity > 1) {
+          item.quantity--;
+        }
+      } else if (action === "remove") {
+        const index = items.findIndex((i) => i.id === itemId);
+        if (index !== -1) {
+          items.splice(index, 1);
+        }
+      }
+
+      renderItems();
+      updateOrderInfo();
+    }
+
+    // Show payment success message and hide main content
+    function showPaymentSuccess() {
+      document.getElementById("payment-success").classList.remove("hidden");
+      // Optionally hide main content to prevent interaction
+      document.querySelector("body > div.max-w-[1200px]").classList.add("hidden");
+      document.querySelector("footer").classList.add("hidden");
+    }
+
+    // Hide payment success message and show main content
+    function hidePaymentSuccess() {
+      document.getElementById("payment-success").classList.add("hidden");
+      document.querySelector("body > div.max-w-[1200px]").classList.remove("hidden");
+      document.querySelector("footer").classList.remove("hidden");
+    }
+
+    // Initial render
+    renderItems();
+    updateOrderInfo();
+
+    // Event delegation for buttons inside order list
+    document.getElementById("order-list").addEventListener("click", handleButtonClick);
+
+    // Add event listener to Thanh toán button
+    document.getElementById("pay-btn").addEventListener("click", () => {
+      showPaymentSuccess();
+    });
+
+    // Add event listener to Quay lại trang chủ button
+    document.getElementById("back-home-btn").addEventListener("click", () => {
+      hidePaymentSuccess();
+      // Optionally, you can add navigation logic here if needed
+    });
+  </script>
+</body>
+</html>
